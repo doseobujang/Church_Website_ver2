@@ -19,5 +19,44 @@
 </script>
 
 <style>
+/* header 설정 */
+.top-header a {
+    font-size: 15px;
+}
 
+.inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 20px;
+}
+
+/* inner-left: top navigation */
+.inner-left {
+    justify-content: center;
+}
+
+.inner-left a {
+    margin:5px;  
+}
+
+.inner-left img {
+    width:20px;
+    height:20px;
+    margin-right:8px;
+}
+
+/* inner-right: sign in/up */
+.inner-right a {
+    padding-top:10px;
+}
+
+@media screen and (max-width: 375px) {
+    .inner-left {
+        display: none;
+    }
+    
+    .navbar-left {
+        display:none;
+    }
+}
 </style>

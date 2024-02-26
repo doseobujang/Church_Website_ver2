@@ -1,19 +1,22 @@
 <template>
-    <AppHeader>
+    <div class="app-header">
         <TopHeader />
         <HeaderNav />
-    </AppHeader>
+        <SideBar />
+    </div>
 </template>
 
 <script>
     import TopHeader from './TopHeader.vue'
     import HeaderNav from './HeaderNav.vue'
+    import SideBar from './SideBar.vue'
 
 export default {
     name: 'AppHeader', 
     components: {
         TopHeader,
-        HeaderNav
+        HeaderNav,
+        SideBar
     }
 }
 </script>
