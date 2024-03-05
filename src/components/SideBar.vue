@@ -1,6 +1,6 @@
 <template>
     <div class="side-bar">
-        <input type="button" id="opacity" onclick="Show.Sidebar();" style="display:none"/>
+        <input type="button" id="opacity" @click="triggerShowSidebar" style="display:none"/>
         <div id="sidebar">
             <nav class="sidebar">
             <!-- sidebar content here -->
@@ -59,7 +59,16 @@
 </template>
 
 <script>
+import { Show } from '../utils/sidebar.js';
 
+export default {
+    name: 'SideBar',
+    methods: {
+        triggerShowSidebar() {
+            Show.Sidebar();
+        }
+    }
+}
 </script>
 
 <style>

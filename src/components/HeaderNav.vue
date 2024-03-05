@@ -52,14 +52,23 @@
             </div>
         </div>
         <div class="navbar-right">
-            <input type="button" id="sidebar-search">
-            <input type="button" id="sidebar-toggle" onclick="Show.Sidebar();">
+            <input type="button" id="sidebar-search"/>
+            <input type="button" id="sidebar-toggle" @click="triggerShowSidebar"/>
         </div>
     </div>
 </template>
 
 <script>
+import { Show } from '../utils/sidebar.js';
 
+export default {
+    name: 'HeaderNav',
+    methods: {
+        triggerShowSidebar() {
+            Show.Sidebar();
+        }
+    }
+}
 </script>
 
 <style>
